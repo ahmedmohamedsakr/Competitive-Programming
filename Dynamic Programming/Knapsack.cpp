@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>                                                //Space  O(n*k)
 using namespace std;                                                   //Time   O(n*k)
 const int N=1e3+5,OO=0x3f3f3f3f;
-int mem[N][N],W[N],P[N],dp[N];
+int mem[N][N],W[N],P[N];
 int n,k;
 int knapsack(int i=0,int rem=k)
 {
