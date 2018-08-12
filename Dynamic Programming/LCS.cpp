@@ -19,15 +19,15 @@ int solve(int i=n-1,int j=m-1)
 void print(int i = n-1, int j = m-1)
 {
     if(i == -1||j == -1)return ;
-    int ret = solve(i, j);
-    if(ret == solve(i-1, j))
-        print(i-1, j);
-    else if(ret == solve(i, j-1))
-        print(i	, j-1);
+    int ret = solve(i,j);
+    if(ret == solve(i-1,j))
+        print(i-1,j);
+    else if(ret == solve(i,j-1))
+        print(i,j-1);
     else
     {
-        print(i-1, j-1);
-        printf("%c", s1[i]);
+        print(i-1,j-1);
+        printf("%c",s1[i]);
     }
 }
 
