@@ -5,8 +5,8 @@ int mem[N][N],W[N],P[N];
 int n,k;
 int knapsack(int i=0,int rem=k)
 {
-    if(rem<0)return -OO;
-    if(i==n)return 0;
+    if(rem<0)return -OO;       //invalid case.     ->     it's better to put invalid case before base case. 
+    if(i==n)return 0;          //base case. 
     int & ret=mem[i][rem];
     if(~ret)return ret;
     ret=knapsack(i+1,rem);
