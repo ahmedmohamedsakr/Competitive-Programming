@@ -6,7 +6,7 @@ using namespace std;
 const int N=4e3+5,M=1e6+5,OO=0x3f3f3f3f;
 int n,m,u,v,vis[N],dis[N],ans;
 int adj[N][N];
-int Dijkstra(int src)
+int BFS(int src)
 {
     queue<int>q;
     q.push(src);
@@ -40,11 +40,11 @@ int main ()
         adj[u][v]=1;
         adj[v][u]=1;
     }
-    ans=Dijkstra(1);
+    ans=BFS(1);
     init();
     for(int i=1; i<=n; ++i)
         for(int j=1; j<=n; ++j)adj[i][j]=1-adj[i][j];
-    ans=max(ans,Dijkstra(1));
+    ans=max(ans,BFS(1));
     printf("%d",(ans!=OO)?ans:-1);
     return 0;
 }
