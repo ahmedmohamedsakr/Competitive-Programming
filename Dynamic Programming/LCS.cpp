@@ -33,7 +33,7 @@ void print(int i = n-1, int j = m-1)
 
 int main()
 {
-    scanf("%s%s", s1, s2);
+    scanf("%s %s", s1, s2);
     n = strlen(s1);
     m = strlen(s2);
     memset(mem, -1, sizeof mem);
