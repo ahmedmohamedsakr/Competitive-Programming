@@ -3,7 +3,8 @@
 ### Properties:
 1. Operates in a first in first out **(FIFO)** type of arrangement.
 2. Add From the **back** and delete from the **front**.
-3. It is implemented by [deque](https://github.com/ahmedmohamedsakr/Competitive-Programming/blob/mine/STL/Sequence%20Containers/Deque.md) or **list**.
+3. It is implemented by [deque](https://github.com/ahmedmohamedsakr/Competitive-Programming/blob/mine/STL/Sequence%20Containers/Deque.md) or 
+[list](https://github.com/ahmedmohamedsakr/Competitive-Programming/blob/mine/STL/Sequence%20Containers/List.md).
 4. add/delete : **O(1)**.
 
 
