@@ -4,8 +4,9 @@
 
 
 ### Properties:
+***
 1. Operates in a first in first out **(FIFO)** type of arrangement.
-2. Add From the **back** and delete from the **front**.
+2. Add From the **back**(rear) and delete from the **front**.
 3. It is implemented by [deque](https://github.com/ahmedmohamedsakr/Competitive-Programming/blob/mine/STL/Sequence%20Containers/Deque.md) or 
 [list](https://github.com/ahmedmohamedsakr/Competitive-Programming/blob/mine/STL/Sequence%20Containers/List.md).
 4. add/delete : **O(1)**.
@@ -13,6 +14,7 @@
 
 
 ### Functions:
+***
 1. **push() , emplace()** : add a new element at the end(rear) of the queue but **emplace()** is useful for storage space.
 2. **pop()** : deletes the first element(from the front) of the queue.
 3. **front()** :  returns a reference to the first element of the queue.
@@ -22,6 +24,7 @@
 7. **swap()** : Exchange the contents of two queues but the queues must be of same type, although sizes may differ.
 
 ### C++ code:
+***
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -71,7 +74,7 @@ int main()
 
 
 **Output:**
-
+***
 ```
 q elements: 1 2 3 4 5
 p elements: 6 7 8 9 10
