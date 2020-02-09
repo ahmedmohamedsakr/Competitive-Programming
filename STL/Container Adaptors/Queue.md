@@ -1,6 +1,6 @@
 # Queue
 
-![alt text](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.geeksforgeeks.org%2Fdifference-between-stack-and-queue-data-structures%2F&psig=AOvVaw3LKDtBPZqhrbF7Rv0Ak-jj&ust=1581293038744000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKio0vWVw-cCFQAAAAAdAAAAABAs)
+![alt text](https://media.geeksforgeeks.org/wp-content/uploads/geek-queue-1.png)
 
 
 ### Properties:
