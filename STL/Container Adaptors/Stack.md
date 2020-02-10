@@ -20,6 +20,8 @@
 5. **size()** : returns the size of the stack,`Time Complexity : O(1)`.
 
 
+
+
 ### Use stack in your program by using this header file:
 ```cpp
 #include <stack>
@@ -34,6 +36,8 @@ stack<T, container> my_stack (container_instance);
 * T is the datatype of elements in the stack like int, float
 * container is the data structure used to initialize your stack. This is optionally and `by default`, it will be `deque<T>` and can be set to other values like `vector<T>` or `list<T>`.
 * container_instance is the instance of container type.
+
+
 
 ### C++ code:
 ***
