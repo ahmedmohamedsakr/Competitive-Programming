@@ -1,38 +1,58 @@
 # Queue
 
-![alt text](https://media.geeksforgeeks.org/wp-content/uploads/geek-queue-1.png)
+![alt text](https://iq.opengenus.org/content/images/2019/05/FIFO.png)
 
 
 ### Properties:
 ***
 1. Operates in a `first in first out` **`(FIFO)`** type of arrangement.
-2. Add From the **`back`**`(rear)` and delete from the **`front`**.
+2. Add From the **`back`**`` and delete from the **`front`**.
 3. It is implemented by [`deque`](https://github.com/ahmedmohamedsakr/Competitive-Programming/blob/mine/STL/Sequence%20Containers/Deque.md) or 
 [`list`](https://github.com/ahmedmohamedsakr/Competitive-Programming/blob/mine/STL/Sequence%20Containers/List.md).
-4. Time Complexity of `add/delete` : **`O(1)`** .
 
 ### Functions:
 ***
-1. **push() , emplace()** : add a new element at the end(rear) of the queue , **emplace()** is useful for storage space.
-2. **pop()** : deletes the first element(from the front) of the queue.
-3. **front()** :  returns a reference to the first element of the queue.
-4. **back()** :  returns a reference to the last element of the queue.
-5. **empty()** : returns whether the queue is empty or not.
-6. **size()** : returns the size of the queue.
-7. **swap()** : Exchange the contents of two queues but the queues must be of same type, although sizes may differ.
+1. **push() , emplace()** : add a new element at the back of the queue,`Time Complexity : O(1)`.
+2. **pop()** : deletes the first element(from the front) of the queue,`Time Complexity : O(1)`.
+3. **front()** :  returns a reference to the first element of the queue,`Time Complexity : O(1)`.
+4. **back()** :  returns a reference to the last element of the queue,`Time Complexity : O(1)`.
+5. **empty()** : returns whether the queue is empty or not,`Time Complexity : O(1)`.
+6. **size()** : returns the size of the queue,`Time Complexity : O(1)`.
+7. **swap()** : Exchange the contents of two queues but the queues must be of same type, although sizes may differ,`Time Complexity : O(n)`.
 
-### C++ code:
+
+### Use queue in your program by using this header file:
+```cpp
+#include <queue>
+```
+
+### queue is defined as:
+```cpp
+queue<T> my_queue;
+ //or
+queue<T, container> my_queue (container_instance);
+```
+* T is the datatype of elements in the queue like int, float
+* container is the data structure used to initialize your queue. This is optionally and `by default`, it will be `deque<T>` and can be set to `list<T>`.
+* container_instance is the instance of container type.
+
+### Ways To Initialize queue Based On Container:
+```cpp
+deque<int>dq(5,100);
+list<int>l(5,100);
+
+queue<int,deque<int> >q_deque;     // empty queue.
+
+queue<int,deque<int> >q_deque2(dq); // queue initialized to copy of deque.
+queue<int,list<int> >q_list(l);      // queue initialized to copy of list.
+```
+
+### Implementation:
 ***
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 queue<int>q,p;
-/*
- queue<int>q;  
- is equal to :
- queue<int,deque<int> >q;
- queue<int,list<int>>q;
-*/
 
 void show(queue<int>q)
 {
