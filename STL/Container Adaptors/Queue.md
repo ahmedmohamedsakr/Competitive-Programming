@@ -21,7 +21,7 @@
 6. **size()** : returns the size of the queue.
 7. **swap()** : Exchange the contents of two queues but the queues must be of same type, although sizes may differ.
 
-### C++ code:
+### * C++ code:
 ***
 ```cpp
 #include <bits/stdc++.h>
