@@ -45,7 +45,7 @@ stack<int,vector<int> >s_vector(v);  // stack initialized to copy of vector.
 stack<int,list<int> >s_list(l);      // stack initialized to copy of list.
 ```
 
-### C++ code:
+### Implementation:
 ***
 ```cpp
 #include <bits/stdc++.h>
