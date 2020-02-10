@@ -1,4 +1,4 @@
-# Stack
+#                                                                                                  Stack
 
 ![alt text](https://media.geeksforgeeks.org/wp-content/uploads/geek-stack-1.png)
 
