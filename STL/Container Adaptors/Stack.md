@@ -39,7 +39,9 @@ stack<T, container> my_stack (container_instance);
 deque<int>dq(5,100);
 vector<int>v(5,100);
 list<int>l(5,100);
+
 stack<int,deque<int> >s_deque;     // empty stack.
+
 stack<int,deque<int> >s_deque2(dq); // stack initialized to copy of deque.
 stack<int,vector<int> >s_vector(v);  // stack initialized to copy of vector.
 stack<int,list<int> >s_list(l);      // stack initialized to copy of list.
