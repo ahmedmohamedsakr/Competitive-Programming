@@ -1,4 +1,4 @@
-# <center>Stack</center>
+# Stack
 
 ![alt text](https://iq.opengenus.org/content/images/2019/05/stack-data-structure.jpg)
 
