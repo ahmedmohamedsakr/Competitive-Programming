@@ -25,45 +25,34 @@
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-queue<int>q,p;
+stack<int>s;
 /*
- queue<int>q;  
+ stack<int>s;
  is equal to :
- queue<int,deque<int> >q;
- queue<int,list<int>>q;
+ stack<int,deque<int> >s;
+ stack<int,list<int> >s;
+ stack<int,vector<int> >s;
 */
 
-void show(queue<int>q)
+void show(stack<int>s)
 {
-    while(!q.empty())
+    while(!s.empty())
     {
-        cout<<q.front()<<" ";
-        q.pop();
+        cout<<s.top()<<" ";
+        s.pop();
     }
     puts("");
 }
 
 int main()
 {
-    for(int i=1; i<6; ++i)q.push(i);
-    for(int i=6;i<11;++i)p.push(i);
-    //q.emplace(7);
-    cout<<"q elements: ";
-    show(q);
-    cout<<"p elements: ";
-    show(p);
-    cout<<"q.front : "<<q.front()<<endl;
-    cout<<"q.back : "<<q.back()<<endl;
-    cout<<"q.size : "<<q.size()<<endl;
-    
-    /*
-    q.swap(p);
-    cout<<"after swap: \n";
-    cout<<"q elements: ";
-    show(q);
-    cout<<"p elements: ";
-    show(p);
-    */
+    for(int i=1; i<6; ++i)s.push(i);
+    //s.emplace(7);
+    cout<<"s: ";
+    show(s);
+    cout<<"top of stack: "<<s.top()<<endl;
+    cout<<"stack size : "<<s.size()<<endl;
+
     return 0;
 }
 
@@ -71,10 +60,8 @@ int main()
 
 **Output:**
 ```
-q elements: 1 2 3 4 5
-p elements: 6 7 8 9 10
-q.front : 1
-q.back : 5
-q.size : 5
+s: 5 4 3 2 1
+top of stack: 5
+stack size : 5
 ```
 
