@@ -11,11 +11,9 @@
 [list](https://github.com/ahmedmohamedsakr/Competitive-Programming/blob/mine/STL/Sequence%20Containers/List.md).
 4. add/delete : **O(1)**.
 
-
-
 ### Functions:
 ***
-1. **push() , emplace()** : add a new element at the end(rear) of the queue but **emplace()** is useful for storage space.
+1. **push() , emplace()** : add a new element at the end(rear) of the queue , **emplace()** is useful for storage space.
 2. **pop()** : deletes the first element(from the front) of the queue.
 3. **front()** :  returns a reference to the first element of the queue.
 4. **back()** :  returns a reference to the last element of the queue.
@@ -72,9 +70,7 @@ int main()
 
 ```
 
-
 **Output:**
-***
 ```
 q elements: 1 2 3 4 5
 p elements: 6 7 8 9 10
