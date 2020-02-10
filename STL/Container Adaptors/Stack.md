@@ -13,9 +13,9 @@
 
 ### Functions:
 ***
-1. **push() , emplace()** : add a new element at the top of the stack , **emplace()** is useful for storage space.
-2. **pop()** : deletes the first element(from the top) of the stack.
-3. **top()** :  returns a reference to the first element of the stack.
+1. **push() , emplace()** : add a new element at the top of the stack , **emplace()** is useful for storage space,`Time Complexity : O(1)`.
+2. **pop()** : deletes the first element(from the top) of the stack,`Time Complexity : O(1)`.
+3. **top()** :  returns a reference to the first element of the stack,`Time Complexity : O(1)`.
 4. **empty()** : returns whether the stack is empty or not,`Time Complexity : O(1)`.
 5. **size()** : returns the size of the stack,`Time Complexity : O(1)`.
 
