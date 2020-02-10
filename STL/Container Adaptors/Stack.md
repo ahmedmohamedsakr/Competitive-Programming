@@ -1,6 +1,6 @@
 # <center>Stack</center>
 
-<center>![alt text](https://iq.opengenus.org/content/images/2019/05/stack-data-structure.jpg)</center>
+center>![alt text](https://iq.opengenus.org/content/images/2019/05/stack-data-structure.jpg)
 
 
 ### Properties:
