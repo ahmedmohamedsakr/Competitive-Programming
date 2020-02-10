@@ -6,10 +6,9 @@
 ### Properties:
 ***
 1. Operates in a `last in first out` **`(LIFO)`** type of arrangement.
-2. Add and delete From the **`back`**`(top)`.
+2. Add and delete from the **`back`**`(top)`.
 3. It is implemented by [`deque`](https://github.com/ahmedmohamedsakr/Competitive-Programming/blob/mine/STL/Sequence%20Containers/Deque.md) or 
 [`list`](https://github.com/ahmedmohamedsakr/Competitive-Programming/blob/mine/STL/Sequence%20Containers/List.md) or [`vector`](https://github.com/ahmedmohamedsakr/Competitive-Programming/blob/mine/STL/Sequence%20Containers/Vector.md).
-4. Time Complexity of `add/delete` : **`O(1)`** .
 
 ### Functions:
 ***
