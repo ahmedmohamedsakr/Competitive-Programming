@@ -1,6 +1,7 @@
-#                                                                                                  Stack
+# <center>Stack</center>
 
 ![alt text](https://media.geeksforgeeks.org/wp-content/uploads/geek-stack-1.png)
+![alt text](https://iq.opengenus.org/content/images/2019/05/stack-data-structure.jpg)
 
 
 ### Properties:
