@@ -19,9 +19,6 @@
 4. **empty()** : returns whether the stack is empty or not,`Time Complexity : O(1)`.
 5. **size()** : returns the size of the stack,`Time Complexity : O(1)`.
 
-
-
-
 ### Use stack in your program by using this header file:
 ```cpp
 #include <stack>
@@ -37,7 +34,16 @@ stack<T, container> my_stack (container_instance);
 * container is the data structure used to initialize your stack. This is optionally and `by default`, it will be `deque<T>` and can be set to other values like `vector<T>` or `list<T>`.
 * container_instance is the instance of container type.
 
-
+### Ways To Initialize Stack Based On Container:
+```cpp
+deque<int>dq(5,100);
+vector<int>v(5,100);
+list<int>l(5,100);
+stack<int,deque<int> >s_deque;     // empty stack.
+stack<int,deque<int> >s_deque2(dq); // stack initialized to copy of deque.
+stack<int,vector<int> >s_vector(v);  // stack initialized to copy of vector.
+stack<int,list<int> >s_list(l);      // stack initialized to copy of list.
+```
 
 ### C++ code:
 ***
@@ -45,13 +51,6 @@ stack<T, container> my_stack (container_instance);
 #include <bits/stdc++.h>
 using namespace std;
 stack<int>s;
-/*
- stack<int>s;
- is equal to :
- stack<int,deque<int> >s;
- stack<int,list<int> >s;
- stack<int,vector<int> >s;
-*/
 
 void show(stack<int>s)
 {
