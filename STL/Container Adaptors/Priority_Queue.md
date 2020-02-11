@@ -7,8 +7,8 @@
 ***
 1. **Priority Queue is an extension of `queue` with following properties:**
 * each element is associated with a `priority` and is served according to its priority.
-*If elements with the same priority occur, they are served according to their order in the queue.
-*The element with the `highest value` is considered as the `highest` priority element by `default`. However, 
+.*If elements with the same priority occur, they are served according to their order in the queue.
+..*The element with the `highest value` is considered as the `highest` priority element by `default`. However, 
 in other case, we can assume the element with the `lowest value` as the highest priority element.
 3. It is implemented by [`deque`](https://github.com/ahmedmohamedsakr/Competitive-Programming/blob/mine/STL/Sequence%20Containers/Deque.md) or 
 [`list`](https://github.com/ahmedmohamedsakr/Competitive-Programming/blob/mine/STL/Sequence%20Containers/List.md).
