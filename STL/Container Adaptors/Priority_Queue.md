@@ -37,9 +37,11 @@ priority_queue<T, container,compare function> priority_my_queue (container_insta
 * T is the datatype of elements in the priority queue like int, float
 * container is the data structure used to initialize your priority queue. This is optionally and `by default`, it will be `vector<T>` and can be set to `deque<T>`.
 * container_instance is the instance of container type.`This is optional you can put it or not`.
-*compare function responsable for giving priority to elements `by default`, it will be `less<T>` and can be set to `greater<T>` or you can built your own compare function.
+* compare function responsable for giving priority to elements `by default`, it will be `less<T>` and can be set to `greater<T>` or you can built your own compare function.
+
 >less<T> The element with the highest value is considered as the highest priority element.
 >greater<T> The element with the lowest value is considered as the highest priority element.
+
 ### Ways To Initialize priority queue Based On Container:
 ```cpp
 deque<int>dq(5,100);
