@@ -40,6 +40,7 @@ priority_queue<T, container,compare function> priority_my_queue (container_insta
 * compare function responsable for giving priority to elements `by default`, it will be `less<T>` and can be set to `greater<T>` or you can built your own compare function.
 
 > less\<T\> The element with the highest value is considered as the highest priority element.
+
 > greater\<T\> The element with the lowest value is considered as the highest priority element.
 
 ### Ways To Initialize priority queue Based On Container:
