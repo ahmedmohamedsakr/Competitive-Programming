@@ -13,13 +13,12 @@
 
 ### Functions:
 ***
-1. **push() , emplace()** : add a new element at the back of the queue,`Time Complexity : O(1)`.
-2. **pop()** : deletes the first element(from the front) of the queue,`Time Complexity : O(1)`.
-3. **front()** :  returns a reference to the first element of the queue,`Time Complexity : O(1)`.
-4. **back()** :  returns a reference to the last element of the queue,`Time Complexity : O(1)`.
-5. **empty()** : returns whether the queue is empty or not,`Time Complexity : O(1)`.
-6. **size()** : returns the size of the queue,`Time Complexity : O(1)`.
-7. **swap()** : Exchange the contents of two queues but the queues must be of same type, although sizes may differ,`Time Complexity : O(n)`.
+1. **push() , emplace()** : add a new element at the top of the priority queue and then the queue is rearranged,`Time Complexity : O(nlogn)`.
+2. **pop()** : deletes the element at the top of the priority queue,`Time Complexity : O(1)`.
+3. **top()** :  returns a reference to the top element of the priority queue,`Time Complexity : O(1)`.
+4. **empty()** : returns whether the priority queue is empty or not,`Time Complexity : O(1)`.
+5. **size()** : returns the size of the priority queue,`Time Complexity : O(1)`.
+6. **swap()** : Exchange the contents of two priority queues but the priority queues must be of same `type and size`,`Time Complexity : O(n)`.
 
 
 ### Use priority queue in your program by using this header file:
@@ -53,6 +52,10 @@ priority_queue<int,vector<int> >pq_vector;     // empty priority_queue.
 priority_queue<int,vector<int> >pq_vector2(l);      // priority queue initialized to copy of vector.
 priority_queue<int,deque<int> >pq_deque(dq); // priority queue initialized to copy of deque.
 ```
+
+### Ways To Initialize priority queue Based On Compare Function:
+
+
 
 ### Illustration of Priority Queue:
 ***
