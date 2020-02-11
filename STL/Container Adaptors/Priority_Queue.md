@@ -9,9 +9,7 @@
    * each element is associated with a `priority` and is served according to its priority.
    * If elements with the same priority occur, they are served according to their order in the queue.
    * The element with the highest value is considered as the highest priority element. However, in other case, we can assume the element with the lowest value as the highest priority element.
-   
-2. It is implemented by [`deque`](https://github.com/ahmedmohamedsakr/Competitive-Programming/blob/mine/STL/Sequence%20Containers/Deque.md) or 
-[`list`](https://github.com/ahmedmohamedsakr/Competitive-Programming/blob/mine/STL/Sequence%20Containers/List.md).
+2. It is implemented by [`vector`](https://github.com/ahmedmohamedsakr/Competitive-Programming/blob/mine/STL/Sequence%20Containers/Vector.md) or [`deque`](https://github.com/ahmedmohamedsakr/Competitive-Programming/blob/mine/STL/Sequence%20Containers/Deque.md).
 
 ### Functions:
 ***
@@ -24,33 +22,33 @@
 7. **swap()** : Exchange the contents of two queues but the queues must be of same type, although sizes may differ,`Time Complexity : O(n)`.
 
 
-### Use queue in your program by using this header file:
+### Use priority queue in your program by using this header file:
 ```cpp
 #include <queue>
 ```
 
-### queue is defined as:
-```cpp
-queue<T> my_queue;
- //or
-queue<T, container> my_queue (container_instance);
+### priority queue is defined as:
 ```
-* T is the datatype of elements in the queue like int, float
-* container is the data structure used to initialize your queue. This is optionally and `by default`, it will be `deque<T>` and can be set to `list<T>`.
+priority_queue<T> my_priority_queue;
+ //or
+priority_queue<T, container> priority_my_queue (container_instance);
+```
+* T is the datatype of elements in the priority queue like int, float
+* container is the data structure used to initialize your priority queue. This is optionally and `by default`, it will be `vector<T>` and can be set to `deque<T>`.
 * container_instance is the instance of container type.
 
-### Ways To Initialize queue Based On Container:
+### Ways To Initialize priority queue Based On Container:
 ```cpp
 deque<int>dq(5,100);
-list<int>l(5,100);
+vector<int>v(5,100);
 
-queue<int,deque<int> >q_deque;     // empty queue.
+priority_queue<int,vector<int> >pq_vector;     // empty priority_queue.
 
-queue<int,deque<int> >q_deque2(dq); // queue initialized to copy of deque.
-queue<int,list<int> >q_list(l);      // queue initialized to copy of list.
+priority_queue<int,vector<int> >pq_vector2(l);      // priority queue initialized to copy of vector.
+priority_queue<int,deque<int> >pq_deque(dq); // priority queue initialized to copy of deque.
 ```
 
-### Implementation:
+### Illustration of Priority Queue:
 ***
 ```cpp
 #include <bits/stdc++.h>
