@@ -34,9 +34,9 @@ priority_queue<T, container> priority_my_queue (container_instance);
 priority_queue<T, container,compare function> priority_my_queue (container_instance);
 ```
 * T is the datatype of elements in the priority queue like int, float
-* container is the data structure used to initialize your priority queue. This is optionally and `by default`, it will be `vector<T>` and can be set to `deque<T>`.
+* container is the data structure used to initialize your priority queue.`by default`, it will be `vector<T>` and can be set to `deque<T>`,`you must use it when you use compare fuction`.
 * container_instance is the instance of container type.`This is optional you can put it or not`.
-* compare function responsable for giving priority to elements `by default`, it will be `less<T>` and can be set to `greater<T>` or you can built your own compare function.
+* compare function responsable for giving priority to elements `by default`, it will be by defualt `less<T>` and can be set to `greater<T>` or you can built your own compare function.
 
 > less\<T\> The element with the highest value is considered as the highest priority element.
 
@@ -54,7 +54,34 @@ priority_queue<int,deque<int> >pq_deque(dq); // priority queue initialized to co
 ```
 
 ### Ways To Initialize priority queue Based On Compare Function:
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
 
+struct comp
+{
+    bool operator()(int l,int r)      //equal less<int>
+    {
+        return l<r;
+    }
+};
+
+priority_queue <int,vector<int>,less<int> >pq;  //sort elements descending.
+priority_queue <int,vector<int>,greater<int> >pq1;  //sort elements ascending.
+priority_queue<int,vector<int>,comp>pq2;             //sort depending on compare function.
+
+int main()
+{
+    for(int i=1; i<7; ++i)pq2.push(i);
+    while(!pq2.empty())
+    {
+        cout<<pq2.top()<<" ";
+        pq2.pop();
+    }
+    return 0;
+}
+
+```
 
 
 ### Illustration of Priority Queue:
