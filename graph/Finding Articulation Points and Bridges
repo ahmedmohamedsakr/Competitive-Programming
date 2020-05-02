@@ -1,0 +1,85 @@
+#include <bits/stdc++.h>                                                      //Complixty time:O(E+V)
+using namespace std;
+const int N=1e3+5,M=1e6+5,OO=0x3f3f3f3f;
+int n,u,v,id,m,outEdgeCount;
+int vis[N],ids[N],low[N],artsPoint[N];
+vector<int>adj[N];
+vector<pair<int,int> >bridges;
+
+void ArticulationPointAndBridges(int root,int current,int parent)
+{
+    vis[current]=1;
+    if(root==parent)outEdgeCount++;    //to check if the parent itself is an Articulation Point.
+    low[current]=ids[current]=++id;   //low[]: lowLink.  ids[]:discover time.
+    for(int to:adj[current])
+    {
+        if(!vis[to])
+        {
+            ArticulationPointAndBridges(root,to,current);
+            low[current]=min(low[current],low[to]);
+
+            //for finding Bridges.
+            if(low[to]>ids[current])bridges.push_back({current,to});
+
+            //>:Articulation point found via bridge.
+            //=:Articulation point found via cycle.
+            if(low[to]>=ids[current])artsPoint[current]=1;
+        }
+        else if(to!=parent)low[current]=min(low[current],ids[to]);
+    }
+}
+
+void findArticulationPointAndBridges()
+{
+    id=outEdgeCount=0;
+    for(int i=0; i<n; ++i)if(!vis[i]){
+            ArticulationPointAndBridges(i,i,-1);
+            //if the root has more than one child then its is an articulation Point.
+            artsPoint[i]=(outEdgeCount>1);
+        }
+}
+
+void Printing()
+{
+    sort(bridges.begin(),bridges.end());
+    printf("%d Bridge(s)\n",bridges.size());
+    for(int i=0; i<bridges.size(); i++)
+        printf("%d - %d\n",bridges[i].first,bridges[i].second);
+
+    printf("Articulation Point(s)\n");
+    for(int i=0; i<n; i++)
+        if(artsPoint[i])printf("Vertex %d\n",i);
+
+}
+
+
+void init()
+{
+    for(auto &it:adj)it.clear();
+    bridges.clear();
+    memset(vis,0,sizeof vis);
+    memset(artsPoint,0,sizeof artsPoint);
+
+}
+
+int main ()
+{
+    while(~scanf("%d",&n))
+    {
+        init();
+        //n->number of nodes.
+        for(int i=0; i<n; ++i)
+        {
+            scanf("%d",&m);
+            //m:the number of connected nodes to i.
+            for(int j=0; j<m; j++)
+            {
+                scanf("%d",&v);
+                adj[i].push_back(v);
+            }
+        }
+        findArticulationPointAndBridges();
+        Printing();
+    }
+    return 0;
+}
