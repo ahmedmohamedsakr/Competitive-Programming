@@ -161,7 +161,7 @@ vector elements: 1 2 3 4
 ### `3. Element access:`
 Function|Return Value|Parameters|Description|Complexity|
  --- | --- | --- | --- | --- |
-operator[]| reference|size_type n|Returns a reference to the element at position n in the vector container.|O(1)|
+operator[ ]| reference|size_type n|Returns a reference to the element at position n in the vector container.|O(1)|
 at()|reference|size_type n|<ul><li>Returns a reference to the element at position n in the vector.</li><li>The function automatically checks whether n is within the bounds of valid elements in the vector, throwing an out_of_range exception if it is not.</li></ul>|O(1)|
 front()|reference|none|Returns a reference to the first element in the vector.|O(1)|
 back()|reference|none|Returns a reference to the last element in the vector.|O(1)|
